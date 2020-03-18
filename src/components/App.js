@@ -6,6 +6,7 @@ import Home from './sections/Home';
 import About from './sections/About';
 import Skills from './sections/Skills';
 import Cv from './sections/Cv';
+import Snow from './Snow';
 
 class App extends React.Component {
     render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
                     <div>
                         <Header />
                         <Switch>
+                            <Snow />
                             <Route path="/home" exact component={Home} />
                             <Route path="/about" exact component={About} />
                             <Route path="/Skills" exact component={Skills} />

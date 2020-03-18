@@ -17,6 +17,7 @@ class Header extends React.Component {
                     to="/home"
                     className={this.props.activeItem === 'home' ? 'item active' : 'item'}
                     onClick={this.setItemActive}
+                    color="white"
                 >
                     Home
                 </Link>

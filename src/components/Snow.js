@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './snow.css';
+import './snow.css';
 
 const Snowflake = props => {
     return (
