@@ -15,8 +15,8 @@ class App extends React.Component {
                 <Router history={history}>
                     <div>
                         <Header />
+                        <Snow />
                         <Switch>
-                            <Snow />
                             <Route path="/home" exact component={Home} />
                             <Route path="/about" exact component={About} />
                             <Route path="/Skills" exact component={Skills} />
