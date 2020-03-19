@@ -1,5 +1,4 @@
 import React from 'react';
-import Body from '../Body';
 
 class Skills extends React.Component {
     render() {

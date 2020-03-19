@@ -5,8 +5,13 @@ import { createStore } from 'redux';
 
 import App from './components/App';
 import reducers from './reducers/index';
+import { saveToLocalStorage, loadFromLocalState } from './saveState';
 
-const store = createStore(reducers);
+const persistedState = loadFromLocalState();
+
+const store = createStore(reducers, persistedState);
+
+store.subscribe(() => saveToLocalStorage(store.getState()));
 
 ReactDOM.render(
     <Provider store={store}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import { Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route, Redirect } from 'react-router-dom';
 import history from '../history';
 import Home from './sections/Home';
 import About from './sections/About';
@@ -17,6 +17,7 @@ class App extends React.Component {
                         <Header />
                         <Snow />
                         <Switch>
+                            <Route exact path="/" render={() => <Redirect to="/home" />} />
                             <Route path="/home" exact component={Home} />
                             <Route path="/about" exact component={About} />
                             <Route path="/Skills" exact component={Skills} />
