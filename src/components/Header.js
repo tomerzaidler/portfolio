@@ -6,7 +6,6 @@ import { selectPage } from '../actions';
 
 class Header extends React.Component {
     setItemActive = e => {
-        console.log(e.target);
         this.props.selectPage(e.target.name);
     };
 

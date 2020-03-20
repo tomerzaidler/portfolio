@@ -1,0 +1,12 @@
+.homeheader {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 20px 3px 2px rgb(104, 148, 168);
+    font-weight: 999;
+    color: rgba(221, 222, 226, 0.671);
+    border-color: black;
+    font-variant-caps: all-petite-caps;
+    transform: scaleX(2.0);
+    transform: scaleY(1.3);
+
+
+}
