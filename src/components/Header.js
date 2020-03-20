@@ -11,13 +11,13 @@ class Header extends React.Component {
 
     render() {
         return (
-            <div className="ui secondary pointing menu">
+            <div className="ui secondary pointing menu inverted" style={{ border: 0, fontSize: 25 }}>
                 <Link
                     name="home"
                     to="/home"
                     className={this.props.activeItem === 'home' ? 'item active' : 'item'}
                     onClick={this.setItemActive}
-                    color="white"
+                    style={{ color: 'rgba(255, 255, 255, 0.863)', fontFamily: 'Sofia' }}
                 >
                     Home
                 </Link>
@@ -26,6 +26,7 @@ class Header extends React.Component {
                     to="/about"
                     className={this.props.activeItem === 'about' ? 'item active' : 'item'}
                     onClick={this.setItemActive}
+                    style={{ color: 'rgba(255, 255, 255, 0.863)', fontFamily: 'Sofia' }}
                 >
                     About
                 </Link>
@@ -34,6 +35,7 @@ class Header extends React.Component {
                     to="/skills"
                     className={this.props.activeItem === 'skills' ? 'item active' : 'item'}
                     onClick={this.setItemActive}
+                    style={{ color: 'rgba(255, 255, 255, 0.863)', fontFamily: 'Sofia' }}
                 >
                     Skills
                 </Link>
@@ -43,6 +45,7 @@ class Header extends React.Component {
                         to="/cv"
                         className={this.props.activeItem === 'cv' ? 'item active' : 'item'}
                         onClick={this.setItemActive}
+                        style={{ color: 'rgba(255, 255, 255, 0.863)', fontFamily: 'Sofia' }}
                     >
                         CV
                     </Link>

@@ -2,17 +2,9 @@ import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring';
 import './homeheader.css';
 
-const styles = {
-    flexcontainer: {
-        marginTop: 150,
-        display: 'flex',
-        flexDirection: 'row'
-    }
-};
-
-const setDelay = (letter, style) => {
+const renderhelper = (letter, style, index) => {
     return (
-        <div className="homeheader" style={{ margin: '10px' }}>
+        <div key={index} className="homeheader" style={{ margin: '10px' }}>
             <div>
                 <animated.div style={style}>{letter}</animated.div>
             </div>
@@ -22,18 +14,17 @@ const setDelay = (letter, style) => {
 
 const HomeHeader = props => {
     const { transform, opacity, freq, scale } = useSpring({
-        from: { scale: 100, opacity: 0, transform: 'scale(0.1)', freq: '0.0175, 0.0' },
-        to: { scale: 150, opacity: 1, transform: 'scale(3)', freq: '0.0, 0.0' },
+        from: { scale: 20, opacity: 0, transform: 'scale(0.1)', freq: '2.0175, 0.0' },
+        to: { scale: 150, opacity: 1, transform: 'scale(3)', freq: '9.0, 3.0' },
         fontSize: '2em',
-        delay: props.delay,
-        config: { duration: 150 }
+        delay: props.index === 0 ? props.firstDelay : props.delay + props.firstDelay,
+        config: { duration: props.duration }
     });
+
     const style = { transform, opacity, freq, scale };
     return (
         <div className="" style={{ justifyContent: 'center' }}>
-            {Array.from(props.text).map(letter => {
-                return setDelay(letter, style);
-            })}
+            {renderhelper(props.text, style, props.index)}
         </div>
     );
 };
