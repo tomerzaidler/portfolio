@@ -4,17 +4,20 @@
     animation: mymove 4s;
 }
 
-/* @keyframes mymove {
-    from {
-        top: 0px;
-        opacity: 0;
-    }
+.info {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Finger Paint';
+    color: whitesmoke
+}
 
-    to {
-        top: 200px;
-        opacity: 1;
-    }
-} */
+.p {
+    font-size: 25px;
+    margin-bottom: 10;
+    font-family: 'Finger Paint';
+    color: whitesmoke
+}
+
 @keyframes mymove {
     0% {
         top: 200px;
