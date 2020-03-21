@@ -4,7 +4,7 @@ import { useSpring, animated } from 'react-spring';
 const TextEffect = props => {
     const { transform, opacity, freq, scale } = useSpring({
         from: { scale: 10, opacity: 0, transform: 'scale(0.7)', freq: '0.0175, 0.0' },
-        to: { scale: 150, opacity: 1, transform: 'scale(1.0)', freq: '0.0, 0.0' },
+        to: { scale: 150, opacity: 1, transform: `scale(${props.size})`, freq: '0.0, 0.0' },
         fontSize: '2em',
         delay: props.delay,
         config: { duration: 500 }

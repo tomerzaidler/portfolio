@@ -56,7 +56,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <TextEffect text="Contact" delay="7600" />
+                <TextEffect size="1.0" text="Contact" delay="7600" />
                 <div className="ui grid" style={{ justifyContent: 'center' }}>
                     <div className="row" style={{ marginLeft: 350, marginRight: 350 }}>
                         <Button delay="7600" name="github"></Button>

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { mouseOver, mouseOut } from '../actions';
 import { linkedin, facebook, github } from '../icons';

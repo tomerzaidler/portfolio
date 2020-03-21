@@ -1,0 +1,32 @@
+.abouttext {
+
+    position: relative;
+    animation: mymove 4s;
+}
+
+/* @keyframes mymove {
+    from {
+        top: 0px;
+        opacity: 0;
+    }
+
+    to {
+        top: 200px;
+        opacity: 1;
+    }
+} */
+@keyframes mymove {
+    0% {
+        top: 200px;
+        opacity: 0;
+    }
+
+
+
+
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
