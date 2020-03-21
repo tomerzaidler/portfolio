@@ -1,7 +1,7 @@
 import React from 'react';
-
 import HomeHeader from '../HomeHeader';
 import Button from '../Button';
+import TextEffect from '../TextEffect';
 
 const styles = {
     flexcontainer: {
@@ -56,11 +56,7 @@ class Home extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div
-                    style={{ marginTop: 130, marginLeft: 350, marginRight: 350, border: 1, borderColor: 'white' }}
-                >
-                    <h3 style={{ fontFamily: 'Sofia', color: 'rgba(255, 250, 250, 0.863)' }}>Contact</h3>
-                </div>
+                <TextEffect text="Contact" delay="7600" />
                 <div className="ui grid" style={{ justifyContent: 'center' }}>
                     <div className="row" style={{ marginLeft: 350, marginRight: 350 }}>
                         <Button delay="7600" name="github"></Button>
