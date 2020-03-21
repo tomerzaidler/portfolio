@@ -13,7 +13,7 @@ const TextEffect = props => {
     return (
         <animated.div style={style}>
             <div style={{ marginTop: 130, marginLeft: 350, marginRight: 350, border: 1, borderColor: 'white' }}>
-                <h3 style={{ fontFamily: 'Sofia', color: 'rgba(255, 250, 250, 0.863)' }}>{props.text}</h3>
+                <h3 style={{ fontFamily: props.font, color: 'rgba(255, 250, 250, 0.863)' }}>{props.text}</h3>
             </div>
         </animated.div>
     );

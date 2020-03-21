@@ -7,7 +7,7 @@ class About extends React.Component {
         return (
             <div className="ui container">
                 <div style={{ marginBottom: 120, textAlign: 'center' }}>
-                    <TextEffect size="4" delay="300" text="About me" />
+                    <TextEffect font="Barrio" size="4" delay="300" text="About me" />
                 </div>
                 <div className="ui divider" style={{ marginBottom: 40 }}></div>
                 <div className="abouttext">
