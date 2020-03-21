@@ -16,9 +16,13 @@ const chooseLogo = logoName => {
             return { logo: facebook, link: 'https://www.facebook.com/tomer.zaidler/' };
     }
 };
-
+const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2 + 20];
+const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
+const getDesign = (style, transform) => {
+    return { ...style, transform };
+};
 const Button = props => {
-    const [hover, setHover] = useState(false);
+    // const [hover, setHover] = useState(false);
 
     const { transform, opacity, freq, scale } = useSpring({
         from: { scale: 10, opacity: 0, transform: 'scale(0.7)', freq: '0.0175, 0.0' },
@@ -28,15 +32,23 @@ const Button = props => {
         config: { duration: 500 }
     });
     let style = { transform, opacity, freq, scale };
+    const [propsDesigne, set] = useSpring(() => ({
+        xy: [0, 0],
+        config: { mass: 10, tension: 5550, friction: 140 }
+    }));
     return (
-        <animated.div onMouseOut={() => setHover(false)} onMouseOver={() => setHover(true)} style={style}>
-            <a href={chooseLogo(props.name).link}>
-                <img
-                    src={chooseLogo(props.name).logo}
-                    style={hover ? { width: '60px', height: '60px' } : { width: '50px', height: '50px' }}
-                />
-            </a>
-        </animated.div>
+        <div
+            onMouseOver={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+            onMouseOut={() => set({ xy: [0, 0] })}
+        >
+            <animated.div style={{ style }}>
+                <animated.div style={getDesign(style, propsDesigne.xy.interpolate(trans1))}>
+                    <a href={chooseLogo(props.name).link}>
+                        <img src={chooseLogo(props.name).logo} style={{ width: '50px', height: '50px' }} />
+                    </a>
+                </animated.div>
+            </animated.div>
+        </div>
     );
 };
 
