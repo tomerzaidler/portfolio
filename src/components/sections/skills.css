@@ -1,0 +1,15 @@
+.icon {
+    font-size: 90px;
+    margin-left: 90px;
+    margin-bottom: 100px;
+    color: white;
+
+}
+
+
+.icon:hover {
+    color: rgba(0, 0, 0, 0.308);
+
+}
+
+/* 80,140,100 */
