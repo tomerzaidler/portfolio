@@ -1,1 +1,1 @@
-export const tomerCV = require('./Tomer-Zaidler-CV.pdf');
+export const tomerCV = require('./Tomer Zaidler-CV(en).pdf');
